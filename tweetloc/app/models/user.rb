@@ -8,5 +8,6 @@ class User
   property :fe_access_token_secret,   String, :length => 255
   property :twit_username,            String, :length => 255
   property :twit_password,            String, :length => 255
+  property :activated,                Boolean, :default => false
 
 end

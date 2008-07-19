@@ -29,5 +29,8 @@ text = client.lookup(:address => "10 Annandale Street", :city => "Annandale", :p
 
 #text = client.lookup(:woeid => 1094076)
 
+text = client.lookup(:woeid => client.user.locations.first.woeid).inspect
+
+
 puts text
 puts "Location successfully updated."

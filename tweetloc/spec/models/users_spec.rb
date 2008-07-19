@@ -14,6 +14,7 @@ describe User do
     it{@user.should respond_to(:fe_access_token_secret)}
     it{@user.should respond_to(:twit_username)}
     it{@user.should respond_to(:twit_password)}  
+    it{@user.should respond_to(:activated)}
   end
   
   describe "relationships" do
