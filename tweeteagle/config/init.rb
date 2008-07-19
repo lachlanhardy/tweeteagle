@@ -95,6 +95,7 @@ use_test :rspec
 #
 # ==== Set up your basic configuration
 #
+gem 'haml', ">=2.1.0"
 dependencies 'merb_openid', 'merb-haml', "merb_helpers"
 
 
@@ -122,6 +123,13 @@ Merb::Config.use do |c|
   # instead: 'datamapper', 'sequel' or 'activerecord'.
   c[:session_store] = 'cookie'
 end
+
+
+# Merb::BootLoader.before_app_loads do
+#   Merb::Config[:haml] = {}
+#   Merb::Config[:haml][:output] = :html4
+#   Merb::Config[:haml][:escape_html] = true
+# end
 
 Merb::BootLoader.after_app_loads do
   Merb.config[:fireeagle] = YAML.load(open(Merb.root / "config" / "fireeagle.yml").read)
