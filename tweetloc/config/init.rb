@@ -124,6 +124,11 @@ Merb::Config.use do |c|
   c[:session_store] = 'cookie'
 end
 
+Merb.BootLoader.after_app_loads do
+  
+  
+end
+
 
 # ==== Tune your inflector
 
