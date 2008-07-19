@@ -23,6 +23,8 @@ Merb.logger.info("Compiling routes...")
 Merb::Router.prepare do |r|
   # RESTful routes
   # r.resources :posts
+  r.match("/").to(:controller => "main", :action => "index").name(:home)
+  
   r.match("/login" ).to(:controller => "sessions", :action => "new").name(:login)
   r.match("/openid").to(:controller => "sessions", :action => "openid").name(:openid)
 
