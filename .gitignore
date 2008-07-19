@@ -5,3 +5,4 @@ tweeteagle/config/database.yml
 tweeteagle/config/fireeagle.yml
 *.log
 *.private
+tweeteagle/db
