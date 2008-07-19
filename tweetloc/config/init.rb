@@ -124,9 +124,8 @@ Merb::Config.use do |c|
   c[:session_store] = 'cookie'
 end
 
-Merb.BootLoader.after_app_loads do
-  
-  
+Merb::BootLoader.after_app_loads do
+  Merb.config[:fireeagle] = YAML.load(open(Merb.root / "config" / "fireeagle.yml").read)
 end
 
 
