@@ -23,14 +23,15 @@ client = FireEagle::Client.new(config)
 ## Actual code to update
 
 #client.update(:q => ARGV.shift)
-text = client.lookup(:address => "10 Annandale Street", :city => "Annandale", :postal => "2038", :state => "NSW", :country => "Australia")
-# client.update(:lat => 51.514565,, :lon => -0.12291)
+client.lookup(:address => "10 Annandale Street", :city => "Annandale", :postal => "2038", :state => "NSW", :country => "Australia")
+#client.update(:lat => 51.514565, :lon => -0.12291)
 #client.update(:woeid => 12706698)
 
 #text = client.lookup(:woeid => 1094076)
+puts client.user.locations.first.woeid
 
 text = client.lookup(:woeid => client.user.locations.first.woeid).inspect
 
-
 puts text
+
 puts "Location successfully updated."
