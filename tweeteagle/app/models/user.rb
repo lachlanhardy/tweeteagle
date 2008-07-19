@@ -10,6 +10,9 @@ class User
   property :twit_password,            String, :length => 255
   property :activated,                Boolean, :default => false
   
+  property :email,                    String, :length => 255
+  property :name,                     String, :length => 255
+  
   has n, :open_identities
 
 end
