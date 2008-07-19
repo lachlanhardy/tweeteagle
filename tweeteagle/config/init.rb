@@ -96,6 +96,7 @@ use_test :rspec
 # ==== Set up your basic configuration
 #
 dependencies 'merb_openid', 'merb-haml', "merb_helpers"
+require 'fireeagle'
 
 
 # IMPORTANT:
@@ -124,7 +125,7 @@ Merb::Config.use do |c|
 end
 
 Merb::BootLoader.after_app_loads do
-  Merb.config[:fireeagle] = YAML.load(open(Merb.root / "config" / "fireeagle.yml").read)
+  Merb.config[:fire_eagle] = YAML.load(open(Merb.root / "config" / "fire_eagle.yml").read)
 end
 
 

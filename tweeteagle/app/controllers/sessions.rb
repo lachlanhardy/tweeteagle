@@ -17,7 +17,6 @@ class Sessions < Application
             # if the id url is nil create it and create the user
             oid  = OpenIdentity.new(:identity_url => identity_url)
             user = User.new
-            Merb.logger.info "\n\n\nsreg is #{sreg.inspect}"
             user.name = sreg["nickname"]
             user.email = sreg["email"]
             user.open_identities << oid

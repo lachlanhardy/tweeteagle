@@ -2,7 +2,7 @@ tweeteagle/tmp/*
 tweeteagle/db/*
 *.DS_Store
 tweeteagle/config/database.yml
-tweeteagle/config/fireeagle.yml
+tweeteagle/config/fire_eagle.yml
 *.log
 *.private
 tweeteagle/db
