@@ -1,7 +1,7 @@
-tweetloc/tmp/*
-tweetloc/db/*
+tweeteagle/tmp/*
+tweeteagle/db/*
 *.DS_Store
-tweetloc/config/database.yml
-tweetloc/config/fireeagle.yml
+tweeteagle/config/database.yml
+tweeteagle/config/fireeagle.yml
 *.log
 *.private
