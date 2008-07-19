@@ -2,6 +2,8 @@ class OpenIdentity
   include DataMapper::Resource
   
   property :id,  Serial
-  property :url, String 
+  property :identity_url, String 
+  
+  belongs_to :user
   
 end

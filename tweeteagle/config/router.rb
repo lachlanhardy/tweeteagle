@@ -23,8 +23,8 @@ Merb.logger.info("Compiling routes...")
 Merb::Router.prepare do |r|
   # RESTful routes
   # r.resources :posts
-  r.match("/signup", :method => :get ).to(:controller => "sessions", :action => "new")
-  r.match("/signup", :method => :post).to(:controller => "sessions", :action => "create")
+  r.match("/login" ).to(:controller => "sessions", :action => "new").name(:login)
+  r.match("/openid").to(:controller => "sessions", :action => "openid").name(:openid)
 
   # This is the default route for /:controller/:action/:id
   # This is fine for most cases.  If you're heavily using resource-based

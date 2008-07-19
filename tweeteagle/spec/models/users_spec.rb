@@ -18,7 +18,11 @@ describe User do
   end
   
   describe "relationships" do
-    it "should have n open_identities"
+    it "should have n open_identities" do
+      r = User.relationships[:open_identities]
+      r.child_model.should == OpenIdentity
+      r.options[:max].should == 1.0/0
+    end
     
   end
   
