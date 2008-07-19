@@ -40,7 +40,7 @@ Gem.path.unshift(Merb.root / "gems")
 # merbapp/lib/magicwand/lib/magicwand.rb to autoload,
 # uncomment this.
 # Merb.push_path(:lib, Merb.root / "lib") # uses **/*.rb as path glob.
-
+require 'haml'
 
 
 
@@ -169,3 +169,4 @@ end
 # And the result is:
 # irb> "wife".plural
 # => wives
+dependency 'merb_openid'
