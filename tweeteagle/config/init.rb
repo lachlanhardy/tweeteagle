@@ -98,7 +98,6 @@ use_test :rspec
 gem 'haml', ">=2.1.0"
 dependencies 'merb_openid', 'merb-haml', "merb_helpers"
 
-
 # IMPORTANT:
 #
 # early on Merb boot init file is not yet loaded.
