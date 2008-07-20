@@ -2,9 +2,11 @@
 %html{ :lang => "en"}
   %head
     %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "content-type" }
+    %meta{ :content => "IE=EmulateIE7", "http-equiv" => "X-UA-Compatible" }
     
     %title TweetEagle!
-    %link{  :charset => "utf-8", :href => "/stylesheets/reset.css", :media => "projection, screen", :rel => "stylesheet", :type => "text/css" }
+    
+    %link{ :charset => "utf-8", :href => "/stylesheets/reset.css", :media => "projection, screen", :rel => "stylesheet", :type => "text/css" }
     %link{ :charset => "utf-8", :href => "/stylesheets/master.css", :media => "projection, screen", :rel => "stylesheet", :type => "text/css" }
   %body
     = catch_content :for_layout
