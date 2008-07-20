@@ -30,7 +30,7 @@ TOC
 		#content a.details {background: #181818 url('/images/bg-details.gif') no-repeat 100% 6px; color: #e71d25; margin: 1.6em 1.6em 0 0; padding: 0 16px 0 0;}
 		
 		/* --- =Headings --- */
-		h1, h2, h3, h4, h5, h6 {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 300; margin: 0 0 0.5em;}
+		h1, h2, h3, h4, h5, h6 {font-family: Times, "Times New Roman", Courier, serif; font-weight: 300; margin: 0 0 0.5em;}
 		h1 {font-size: 2.572em;}
 		h2 {font-size: 1.714em;}
 		h3 {font-size: 1.45em;}
@@ -46,22 +46,14 @@ TOC
 
 	/* -- =Generic Forms -- */
 
-	form {clear: both; float: left; padding: 0 0 2em 0;}
-		fieldset {margin: 0; padding: 0;}
-			fieldset fieldset {clear: both;}
-		form label {clear: both; display: block; float: left; font-weight: bold; margin: 0 0 0.4em 0; padding: 0.5em 0 0 0; width: auto;}
-			form label span {display: block; float: left; margin: 0.2em 0 0 0; width: 8em;}
-				form label span.note {clear:both; color: #565757; font: 0.86em "Trebuchet MS", Arial, Helvetica, sans-serif; margin: 0.5em 0 0 9em; width: auto;}
-		input {background: #e6e5e5; color: #000; float: left; width: 14em;}
-		select {float: left; width: 10em;}
-		textarea {float: left; width: 27em;}
-			input.checkbox {margin: 0.4em 0; width: auto;}
-			input.submit {margin: 0.4em 0 0 10.2em; width: 14.3em;}
-			form.button-to {display: inline; margin: 0; padding: 0;}
+	form {background: #222; border: 1px solid #333; clear: both; float: left; padding: 0.5em; width: auto;}
+		form label {clear: both; display: block; float: left; font-weight: 700; margin: 0 1em 0.4em 0; padding: 0; width: auto;}
+		input {float: left; line-height: 2; margin: 0 1em 0 0; width: 20em;}
+			form .submit {margin: 0; width: auto;}
 
 
 /* - =Structure - */
-body {background: #1e1e1e; color: #fcfcfc; font: 62.5%/1.3 "Trebuchet MS", Arial, Helvetica, sans-serif; margin: 0; padding: 0;}
+body {background: #1e1e1e; color: #fcfcfc; font: 62.5%/1.3 "Helvetica Neue", Helvetica, Arial, sans-serif; margin: 0; padding: 0;}
 	body.home {}
 	
 #page {font-size: 1.6em; position: relative;}
@@ -70,7 +62,7 @@ body {background: #1e1e1e; color: #fcfcfc; font: 62.5%/1.3 "Trebuchet MS", Arial
   #pagetitle {background: #0e0e0e url('/images/bg-perth.jpg') no-repeat 0 0; border-bottom: 1px solid #7C1315; height: 146px; margin: 0; text-align: center;}
   #pagetitle {font-size: 1.8em;}*/
   
-  #header {background: #ff8000; border: 2px solid #aaa; border-left: none; border-right: none; color: #fcfcfc; margin: 3em 0 4em 0; padding: 0.2em 1em 0.4em 1em;}
+  #header {background: #ff8000; border: 2px solid #aaa; border-left: none; border-right: none; color: #fcfcfc; margin: 3em 0 4em 0; padding: 0.3em 1em 0.2em 1em;}
     #header h1 {margin: 0;}
 	
   /* -- =Content -- */

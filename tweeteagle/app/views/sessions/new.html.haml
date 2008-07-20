@@ -1,2 +1,3 @@
 - form_tag :action => url(:openid), :method => :post do
-  = text_field  :name => "openid_url", :label => "Open Id URL"
+  = text_field  :name => "openid_url", :id => "openid_url", :label =>{:for => "openid_url", :title => "OpenID URL"}
+  = submit_button "Verify", :class => "submit"
