@@ -1,0 +1,36 @@
+- form_for current_user, :action => url(:user, current_user) do
+  %fieldset
+    %legend Personal Details
+    %p
+      = text_control :name,   :label => "Name"
+    %p
+      = text_control :email,  :label => "Email"
+  %fieldset
+    %legend Twitter Details
+    %p
+      = text_control :twitter_username, :label => "Username"
+    %p
+      = password_control :twitter_password, :label => "Password"
+  
+  %p
+    = submit_button "Save"
+    
+  
+%fieldset
+  %legend Fire Eagle
+  - if current_user.fire_eagle_setup?
+    %p
+      Your Fire Eagle Account is currently Active.  Your location is
+      = current_user.current_location.to_s
+      Please visit this link to authorize TweetEagle with you're account
+  - else
+    - if current_user.fire_eagle_requested?
+      %p
+        - form_tag :action => url(:activate_fire_eagle_user, current_user), :method => :put do
+          = submit_button "Activate Your Fire Eagle Account"
+    - else
+      %p
+        You need to activate you're account with Fire Eagle.  Please 
+        = link_to "visit to activate", current_user.fire_eagle_auth_url, :class => "external"
+  
+  
