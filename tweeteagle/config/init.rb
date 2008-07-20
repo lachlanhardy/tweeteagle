@@ -124,15 +124,16 @@ Merb::Config.use do |c|
   c[:session_store] = 'cookie'
 end
 
-
-# Merb::BootLoader.before_app_loads do
-#   Merb::Config[:haml] = {}
-#   Merb::Config[:haml][:output] = :html4
-#   Merb::Config[:haml][:escape_html] = true
-# end
+# FIXME: I have no frickin' idea why this doesn't work
+Merb::BootLoader.before_app_loads do
+  Merb::Config[:haml] = {}
+  Merb::Config[:haml][:output] = :html4
+  Merb::Config[:haml][:escape_html] = true
+end
 
 Merb::BootLoader.after_app_loads do
   Merb.config[:fireeagle] = YAML.load(open(Merb.root / "config" / "fireeagle.yml").read)
+
 end
 
 
