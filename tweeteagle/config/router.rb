@@ -25,14 +25,19 @@ Merb::Router.prepare do |r|
   # r.resources :posts
   r.match("/").to(:controller => "main", :action => "index").name(:home)
   
-  r.match("/login" ).to(:controller => "sessions", :action => "new").name(:login)
-  r.match("/openid").to(:controller => "sessions", :action => "openid").name(:openid)
+  r.to(:controller => "sessions") do |session|
+    session.match("/login" ).to(:action => "new"    ).name(:login)
+    session.match("/logout").to(:action => "destroy").name(:logout)
+    session.match("/openid").to(:action => "openid" ).name(:openid)
+  end
+  
+  r.resources :users, :member => {:activate_fire_eagle => :put}
 
   # This is the default route for /:controller/:action/:id
   # This is fine for most cases.  If you're heavily using resource-based
   # routes, you may want to comment/remove this line to prevent
   # clients from calling your create or destroy actions with a GET
-  r.default_routes
+  # r.default_routes
   
   # Change this for your home page to be available at /
   # r.match('/').to(:controller => 'whatever', :action =>'index')

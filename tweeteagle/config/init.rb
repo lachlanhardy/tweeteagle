@@ -96,7 +96,7 @@ use_test :rspec
 # ==== Set up your basic configuration
 #
 gem 'haml', ">=2.1.0"
-dependencies 'merb_openid', 'merb-haml', "merb_helpers"
+dependencies 'merb_openid', 'merb-haml', "merb_helpers", "merb-assets", "merb-action-args"
 require 'fireeagle'
 
 # IMPORTANT:

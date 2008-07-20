@@ -4,3 +4,10 @@
 %p
   You are logged in as
   = current_user.name || "No Name Set"
+  You're current location is 
+  - if current_user.fire_eagle_setup?
+    = current_user.current_location.to_s
+  - else
+    Please 
+    = link_to "activate Fire Eagle", url(:edit_user, current_user)
+    for your account.

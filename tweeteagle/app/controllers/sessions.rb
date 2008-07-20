@@ -4,6 +4,11 @@ class Sessions < Application
     render
   end
   
+  def destroy
+    session.delete
+    redirect url(:home)
+  end
+  
   def openid
     if openid_request? # has the user provided a url (openid_url)
       openid_authenticate(:sreg => ["nickname", "email"]) do |result, identity_url, sreg|
@@ -21,7 +26,7 @@ class Sessions < Application
             user.email = sreg["email"]
             user.open_identities << oid
             user.save
-            redirect(:edit_profile) and return ""
+            redirect url(:edit_user, user) and return ""
           end
           redirect url(:home)
         else
