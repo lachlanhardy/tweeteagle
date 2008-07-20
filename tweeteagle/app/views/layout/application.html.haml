@@ -8,5 +8,17 @@
     
     %link{ :charset => "utf-8", :href => "/stylesheets/reset.css", :media => "projection, screen", :rel => "stylesheet", :type => "text/css" }
     %link{ :charset => "utf-8", :href => "/stylesheets/master.css", :media => "projection, screen", :rel => "stylesheet", :type => "text/css" }
-  %body
-    = catch_content :for_layout
+  %body#tweeteagle-com
+    #page
+      #header
+        %h1 TweetEagle 
+      #content
+        = catch_content :for_layout
+      #footer
+        %p 
+          Produced at random by
+          %span.vcard
+            %a.fn.url{ :href => "http://hassox.blogspot.com/"} hassox
+          &amp;
+          %span.vcard
+            %a.fn.url{ :href => "http://lachstock.com.au/"} Lachlan Hardy
