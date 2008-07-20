@@ -1,5 +1,7 @@
 module Merb
   module UserHelpers
+    class NotLoggedIn < Merb::Controller::Unauthorized; end
+    
     def logged_in?
       !!current_user
     end
