@@ -97,6 +97,7 @@ use_test :rspec
 #
 gem 'haml', ">=2.1.0"
 dependencies 'merb_openid', 'merb-haml', "merb_helpers"
+require 'fireeagle'
 
 
 # IMPORTANT:
@@ -132,8 +133,7 @@ Merb::BootLoader.before_app_loads do
 end
 
 Merb::BootLoader.after_app_loads do
-  Merb.config[:fireeagle] = YAML.load(open(Merb.root / "config" / "fireeagle.yml").read)
-
+  Merb.config[:fire_eagle] = YAML.load(open(Merb.root / "config" / "fire_eagle.yml").read)
 end
 
 
