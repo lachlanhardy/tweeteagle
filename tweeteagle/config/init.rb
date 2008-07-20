@@ -131,7 +131,7 @@ Merb::BootLoader.before_app_loads do
 end
 
 Merb::BootLoader.after_app_loads do
-  Merb.config[:fireeagle] = YAML.load(open(Merb.root / "config" / "fireeagle.yml").read)
+  Merb.config[:fireeagle] = YAML.load(open(Merb.root / "config" / "fire_eagle.yml").read)
 
 end
 
