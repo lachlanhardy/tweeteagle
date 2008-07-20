@@ -99,7 +99,6 @@ gem 'haml', ">=2.1.0"
 dependencies 'merb_openid', 'merb-haml', "merb_helpers"
 require 'fireeagle'
 
-
 # IMPORTANT:
 #
 # early on Merb boot init file is not yet loaded.
