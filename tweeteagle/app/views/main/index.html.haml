@@ -1,11 +1,11 @@
 %p
   Welcome to TweetEagle
-  
 %p
   You are logged in as
   = current_user.name || "No Name Set"
-  You're current location is 
+%p
   - if current_user.fire_eagle_setup?
+    Your current location is 
     = current_user.current_location.to_s
   - else
     Please 
