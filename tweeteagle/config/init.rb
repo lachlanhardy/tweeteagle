@@ -124,7 +124,7 @@ Merb::Config.use do |c|
   c[:session_store] = 'cookie'
 end
 
-# FIXME: I have no frickin' idea why this doesn't work
+# FIXME: I have no frickin' idea why this html4 stuffdoesn't work
 Merb::BootLoader.before_app_loads do
   Merb::Config[:haml] = {}
   Merb::Config[:haml][:output] = :html4
