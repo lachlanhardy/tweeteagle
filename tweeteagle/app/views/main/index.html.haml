@@ -1,13 +1,17 @@
-%p
-  Welcome to TweetEagle
-%p
-  You are logged in as
-  = current_user.name || "No Name Set"
-%p
-  - if current_user.fire_eagle_setup?
-    Your current location is 
-    = current_user.current_location.to_s
-  - else
-    Please 
-    = link_to "activate Fire Eagle", url(:edit_user, current_user)
-    for your account.
+- @top = "true"
+
+%div.column
+  %div.item
+    - throw_content :top do
+      %h1 TweetEagle
+    %p
+      You are logged in as
+      = current_user.name || "No Name Set"
+    %p
+      - if current_user.fire_eagle_setup?
+        Your current location is 
+        = current_user.current_location.to_s
+      - else
+        Please 
+        = link_to "activate Fire Eagle", url(:edit_user, current_user)
+        for your account.

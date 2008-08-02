@@ -11,7 +11,11 @@
   %body#tweeteagle-com
     #page
       #header
-        %h1 TweetEagle 
+        - if @top
+          = catch_content :top  
+        - else 
+          %p#pagetitle
+            %a{ :href => "/" } TweetEagle
       #content
         = catch_content :for_layout
       #footer
